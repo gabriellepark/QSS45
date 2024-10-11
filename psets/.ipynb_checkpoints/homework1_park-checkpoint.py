@@ -1,6 +1,27 @@
 {
  "cells": [
   {
+   "cell_type": "markdown",
+   "id": "8ee1764a-6134-4576-acf6-8fe612e2f14e",
+   "metadata": {},
+   "source": [
+    "For each question, submit one python function. Please submit your solutions as a .py file\n",
+    "on Canvas. Each should take in a multivariate input of independent variables (i.e. X) and\n",
+    "one dependent variable (i.e. y). The fastest solution will get 1 bonus point.\n",
+    "1. Implement multivariate linear regression using gradient descent. Your function\n",
+    "should take in a k-dimensional array and 1 one-dimensional array, then return a vector\n",
+    "of weights (sized K+1) that correspond to β0, β1, ..., βk. The first co-efficient β0 should\n",
+    "be the intercept.\n",
+    "2. Implement multivariate logistic regression using gradient descent. Your function\n",
+    "should take in a k-dimensional array and 1 one-dimensional array, then return a vector\n",
+    "of weights (sized K+1). The y values here are typically 0s or 1s.\n",
+    "\n",
+    "For each of your solutions, explain your updating rule and loss function. Typeset the relevant\n",
+    "equations. This isn’t meant to be perfunctory; the point of this exercise is to understand\n",
+    "these algorithms both in writing and in code."
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 1,
    "id": "9503d0ab-c2cf-4bdc-aa2a-2f971a8bc5a3",
@@ -15,6 +36,14 @@
     "# Gradient Descent Parameters\n",
     "alpha = learning_rate = 0.04\n",
     "iterations = 1000"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ec8f6114-08b4-444b-989e-2e4b04a32b39",
+   "metadata": {},
+   "source": [
+    "**Question 1: Multivariate Linear Regression**"
    ]
   },
   {
@@ -149,6 +178,14 @@
     "plt.ylabel(\"Cost (MSE)\")\n",
     "plt.grid(True)\n",
     "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d1f7bfba-94bd-4a61-9c72-dafd3f745a97",
+   "metadata": {},
+   "source": [
+    "**Question 2: Multivariate Logistic Regression**"
    ]
   },
   {
